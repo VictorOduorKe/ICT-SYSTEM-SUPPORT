@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light mode tokens: strictly solid colors, zero gradients */
+  --color-surface-base: #f8fafc;
+  --color-surface-card: #ffffff;
+  --color-surface-hover: #f1f5f9;
+  --color-surface-border: #e2e8f0;
+
+  --color-content-primary: #0f172a;
+  --color-content-secondary: #475569;
+  --color-content-muted: #94a3b8;
+  --color-content-inverse: #ffffff;
+}
+
+.dark {
+  /* Dark mode tokens: strictly solid colors, zero gradients */
+  --color-surface-base: #0f172a;
+  --color-surface-card: #1e293b;
+  --color-surface-hover: #334155;
+  --color-surface-border: #334155;
+
+  --color-content-primary: #f8fafc;
+  --color-content-secondary: #cbd5e1;
+  --color-content-muted: #64748b;
+  --color-content-inverse: #0f172a;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--color-surface-base);
+  color: var(--color-content-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Enforce no-gradient policy across custom utilities */
+* {
+  background-image: none !important;
+}
